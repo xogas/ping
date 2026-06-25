@@ -1,0 +1,60 @@
+version: "2"
+
+run:
+  timeout: 3m
+  tests: true
+
+output:
+  sort-order:
+    - file
+    - linter
+    - severity
+
+formatters:
+  enable:
+    - goimports
+    - gofmt
+
+linters:
+  default: none
+  enable:
+    # Defaults
+    - errcheck
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    # Code quality
+    - gocritic
+    - gocyclo
+    - goconst
+    - gocognit
+    - misspell
+    - unconvert
+    - revive
+    # Error handling
+    - errorlint
+    - errname
+    # Security
+    - gosec
+    # Modern Go
+    - copyloopvar
+    - intrange
+    - modernize
+    - exptostd
+    # Safety
+    - durationcheck
+    - fatcontext
+    - nilerr
+    - nolintlint
+    - whitespace
+    - bidichk
+    - predeclared
+    - makezero
+    - reassign
+    - wastedassign
+    - canonicalheader
+    - gocheckcompilerdirectives
+    - goprintffuncname
+    - iface
+    - usestdlibvars
